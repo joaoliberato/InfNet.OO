@@ -8,24 +8,17 @@ namespace InfNet.OO.Domain
 {
     public class Pessoa
     {
+        public Pessoa(string nome, DateTime dataNascimento)
+        {
+            Nome = nome;
+            DataNascimento = dataNascimento;
+        }
         public Pessoa(string nome)
         {
             Nome = nome;
         }
         public string Nome { get; set; }
-        private List<Documento> documentos = [];
+        public DateTime DataNascimento { get; set; }
 
-        public void AddDocumento(Documento documento)
-        {
-            documentos.Add(documento);
-        }
-        public void RemoveDocumento(Documento documento)
-        {
-            documentos.Remove(documento);
-        }
-        public List<Documento> GetDocumentos()
-        {
-            return documentos;
-        }
     }
 }

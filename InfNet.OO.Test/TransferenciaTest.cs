@@ -28,7 +28,7 @@ namespace InfNet.OO.Test
                 Nome = "Ferrari",
                 IdEquipe = 2
             };
-            var lewisHamilton = FuncionarioFactory.Create(new Pessoa("Lewis Hamilton"), 1000);
+            var lewisHamilton = FuncionarioFactory.Create(new Pessoa("Lewis Hamilton", new DateTime(1985, 1, 7)), 1000);
             lewisHamilton.IdFuncionario = 1;
             equipeOrigem.AddFuncionario(lewisHamilton);
             equipeOrigem.Gerente = (Gerente)FuncionarioFactory.Create(new Pessoa("Toto Wolf"), 5000, equipeOrigem);

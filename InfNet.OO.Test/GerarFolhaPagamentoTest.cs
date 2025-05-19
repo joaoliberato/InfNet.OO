@@ -1,5 +1,6 @@
 using InfNet.OO.Application;
 using InfNet.OO.Domain;
+using InfNet.OO.Domain.Exception;
 using InfNet.OO.Domain.Factory;
 using InfNet.OO.Domain.Repository;
 using InfNet.OO.Repository;
@@ -33,5 +34,16 @@ public class GerarFolhaPagamentoTest
         var result = folhaPagamento.Gerar(1);
         // Assert
         Assert.AreEqual(12250, result.ValorTotal);
+    }
+
+    [TestMethod]
+    public void GerarFolhaDePagamentoComEquipeNula_DeveRetornar_EquipeNotFoundException()
+    {
+        // Arrange
+        IEquipeRepository repository = new EquipeRepository();
+        GerarFolhaDePagamento folhaPagamento = new GerarFolhaDePagamento(repository);
+
+        // Assert
+        Assert.ThrowsException<EquipeNotFoundException>(()=> folhaPagamento.Gerar(1));
     }
 }

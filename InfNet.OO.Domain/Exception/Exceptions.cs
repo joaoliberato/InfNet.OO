@@ -26,14 +26,7 @@ namespace InfNet.OO.Domain.Exception
         {
         }
     }
-
-    public class FuncionarioNotFoundException : System.Exception
-    {
-        public FuncionarioNotFoundException() : base("Funcionário não encontrado")
-        {
-        }
-    }
-
+    
     public class EquipeNotFoundException : System.Exception
     {
         public EquipeNotFoundException() : base("Equipe não encontrada")

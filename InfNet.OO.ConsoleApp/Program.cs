@@ -17,7 +17,7 @@ var mercedes = new Equipe()
     Nome = "Mercedes",
     IdEquipe = 1
 };
-Tecnico lewis = (Tecnico)FuncionarioFactory.Create(new Pessoa("Lewis Hamilton"), 1000, "Piloto", 15);
+Tecnico lewis = (Tecnico)FuncionarioFactory.Create(new Pessoa("Lewis Hamilton", new DateTime(1985,1,7)), 1000, "Piloto", 15);
 lewis.IdFuncionario = 1;
 mercedes.AddFuncionario(lewis);
 mercedes.AddFuncionario(FuncionarioFactory.Create(new Pessoa("George Russell"), 1000));
