@@ -29,7 +29,7 @@ O projeto simula um ambiente corporativo onde é possível:
 ## Como Executar
 
 1. Clone o repositório:
-   git clone https://github.com/seu-usuario/InfNet.OO.git cd InfNet.OO
+   git clone https://github.com/joaoliberato/InfNet.OO.git cd InfNet.OO
 
 2. Restaure os pacotes:
 
